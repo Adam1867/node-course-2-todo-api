@@ -113,15 +113,6 @@ app.post('/users/login', (req, res) => {
   }).catch((err) => {
     res.status(400).send();
   });
-  // var user = new User(body);
-
-  // user.save().then(() => {
-  //   return user.generateAuthToken();
-  // }).then((token) => {
-  //   res.header('x-auth', token).send({user});
-  // }).catch((err) => {
-  //   res.status(400).send(err);
-  // });
 });
 
 app.get('/users/me', authenticate, (req, res) => {
